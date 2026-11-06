@@ -1,0 +1,481 @@
+:root {
+    --sang: #CC1A26;
+    --sang-fonce: #A3141E;
+    --os: #F3ECE0;
+    --noir: #0D0B0B;
+    --gris: #9A9087;
+}
+
+.btn-primary,
+.btn-success {
+    --bs-btn-bg: var(--sang);
+    --bs-btn-border-color: var(--sang);
+    --bs-btn-color: var(--os);
+    --bs-btn-hover-bg: var(--sang-fonce);
+    --bs-btn-hover-border-color: var(--sang-fonce);
+    --bs-btn-hover-color: var(--os);
+    --bs-btn-active-bg: var(--sang-fonce);
+    --bs-btn-active-border-color: var(--sang-fonce);
+    --bs-btn-active-color: var(--os);
+    --bs-btn-focus-shadow-rgb: 204, 26, 38;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+body {
+    background-color: var(--noir);
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+}
+
+.haut{
+    background-image:
+    linear-gradient(to top, rgba(255, 0, 17, 0.35), transparent 50%),
+    linear-gradient(rgba(13, 11, 11, 0.5), rgba(13, 11, 11, 1)),
+    url("media/hero.jpeg");
+    background-size: cover;
+    background-position:50% 60%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#welcome {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.85rem;
+    color: var(--os);
+}
+
+.title,
+.title2,
+.title3 {
+    text-transform: uppercase;
+    line-height: 0.95;
+}
+
+.title2::after,
+.title3::after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 4px;
+    background: var(--sang);
+    margin-top: 0.75rem;
+}
+
+.title3::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.accent {
+    color: var(--sang);
+}
+
+.title  { font-size: clamp(3.5rem, 14vw, 8rem); }
+.title2 { font-size: clamp(2rem, 8vw, 4rem); }
+.title3 { font-size: clamp(2rem, 7vw, 3rem); }
+
+.carousel-indicators {
+    bottom: auto;
+    top: 22rem;
+}
+
+.btn {
+    transition: transform 0.2s ease, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline-light {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    border-radius: 0;
+}
+
+.img-carousel {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 10px;
+}
+
+.product-title {
+    font-family: 'Anton', Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.carousel-item {
+    transition: transform 0.8s ease-in-out;
+}
+
+#identite {
+    text-align: center;
+}
+
+.mini-text {
+    font-size: 0.8rem;
+}
+
+.img-produit {
+    height: 18rem;
+    object-fit: cover;
+}
+
+.prix {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+#btn-whatsapp-flottant {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 1030;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: #25d366;
+    color: white;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+#btn-whatsapp-flottant:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-filtre {
+    background-color: transparent;
+    border: 1px solid var(--os, #F3ECE0);
+    color: var(--os, #F3ECE0);
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+
+.btn-filtre:hover,
+.btn-filtre.actif {
+    background-color: var(--sang, #CC1A26);
+    border-color: var(--sang, #CC1A26);
+    color: var(--os, #F3ECE0);
+}
+
+.shadow-noir {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.navbar .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: var(--bs-nav-link-padding-x);
+    right: var(--bs-nav-link-padding-x);
+    bottom: 0.25rem;
+    height: 2px;
+    background: var(--sang);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.navbar-toggler {
+    border-color: rgba(243, 236, 224, 0.4);
+}
+
+.bande {
+    --goutte-h: 100px;
+    position: relative;
+    padding: calc(var(--goutte-h) + 0.5rem) 1rem 1rem;
+    background: var(--os);
+    color: var(--noir);
+    font-family: 'Anton', Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(1.1rem, 3.5vw, 1.75rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1.5rem;
+    padding: 0.9rem 1rem;
+}
+
+.bande span:nth-child(even) {
+    color: var(--sang);
+}
+
+.bande::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--goutte-h);
+    background: url("media/gouttes.svg") repeat-x left top;
+    background-size: auto 100%;
+    pointer-events: none;
+}
+
+.carte-produit {
+    background-color: #161312;
+    border: 1px solid #2A2522;
+    border-radius: 0;
+    overflow: hidden;
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.carte-produit .img-produit {
+    border-radius: 0;
+    transition: transform 0.5s ease;
+}
+
+.carte-produit .card-title {
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.carte-produit .prix {
+    color: var(--os);
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.carte-produit .prix::before {
+    content: "";
+    display: inline-block;
+    width: 0.55rem;
+    height: 0.55rem;
+    margin-right: 0.6rem;
+    background: var(--sang);
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+    vertical-align: middle;
+}
+
+.carte-produit .form-select {
+    background-color: var(--noir);
+    border-color: #4A423D;
+    border-radius: 0;
+    color: var(--os);
+}
+
+.carte-produit .form-select:focus {
+    border-color: var(--sang);
+    box-shadow: 0 0 0 0.2rem rgba(204, 26, 38, 0.3);
+}
+
+.carte-produit .form-select.is-invalid {
+    border-color: var(--bs-form-invalid-border-color);
+}
+
+.btn-tourner {
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+}
+
+#identite p {
+    font-family: 'Anton', Impact, sans-serif;
+    text-transform: uppercase;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    line-height: 1.1;
+    max-width: 22ch;
+    margin: 0 auto 1rem;
+}
+
+#identite .mini-text {
+    color: var(--gris);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+}
+
+.accordion {
+    --bs-accordion-bg: #161312;
+    --bs-accordion-border-color: #2A2522;
+    --bs-accordion-border-radius: 0;
+    --bs-accordion-inner-border-radius: 0;
+    --bs-accordion-btn-bg: #161312;
+    --bs-accordion-active-bg: #161312;
+    --bs-accordion-active-color: var(--os);
+    --bs-accordion-btn-focus-border-color: var(--sang);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0.2rem rgba(204, 26, 38, 0.3);
+}
+
+.accordion-item {
+    border-left: 4px solid var(--sang);
+}
+
+.accordion-button {
+    font-family: 'Anton', Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 1.25rem;
+}
+
+.accordion-body {
+    color: #D8CFC2;
+    line-height: 1.6;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    background: url("media/gouttes.svg") repeat-x left top;
+    pointer-events: none;
+}
+
+footer {
+    position: relative;
+    padding-top: 4rem;
+    background-color: #161312;
+    border-top: 1px solid #2A2522;
+    margin-top: 3rem;
+}
+
+.footer-marque {
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: clamp(3rem, 12vw, 7rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+footer h2 {
+    font-family: 'Anton', Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.5rem;
+}
+
+footer a {
+    color: var(--os);
+    text-decoration: none;
+}
+
+.footer-icons a {
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-icons a:hover {
+    color: var(--sang);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+
+@media (max-width: 768px) {
+
+    .haut {
+        background-attachment: scroll;
+        min-height: 100vh;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+        .title {
+        text-align: center;
+    }
+
+    #btnplus{
+        font-size: 1.5rem;
+        padding: 8px 16px;
+        min-height: 50px;
+    }
+
+    #btnproduits {
+        font-size: 1.5rem;
+        padding: 8px 16px;
+    }
+
+        #btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+    }
+
+    .bande {
+        padding-top: 3.4rem;
+        --goutte-h: 64px;
+    }
+
+    .bande::before {
+        height: 43px;
+        background-size: 160px 43px;
+    }
+
+    #identite {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 20%;
+        margin-bottom: 30%;
+    }
+    .carte-produit .card-title {
+        font-size: 1.1rem;
+    }
+
+    .carte-produit .btn-commander {
+        font-size: 0.75rem;
+        padding: 0.6rem 0.4rem;
+    }
+}
+
+@media (hover: hover) {
+    .carte-produit:hover {
+        border-color: var(--sang);
+        transform: translateY(-4px);
+    }
+
+    .carte-produit:hover .img-produit {
+        transform: scale(1.05);
+    }
+}
