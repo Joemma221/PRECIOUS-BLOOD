@@ -1,5 +1,7 @@
 # Precious Blood
 
+Lien du site : https://precious-blood.netlify.app/
+
 Site vitrine de **Precious Blood**, marque de vêtements et accessoires basée à Dakar (Sénégal) : maillots, t-shirts, bonnets et crop-tops. Les clients parcourent la collection, choisissent leur taille et passent commande directement sur WhatsApp, avec un message déjà rédigé.
 
 ## Fonctionnalités
